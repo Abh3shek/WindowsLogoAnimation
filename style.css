@@ -1,0 +1,63 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.parentDiv{
+    width: 100vw;
+    height: 100vh;
+    background-color: #008A00;
+    position: relative;
+}
+
+.childDiv{
+    width: 14vw;
+    height: 30.9vh;
+    position: absolute;
+    left: 43%;
+    top: 29.7%;
+    position: relative;
+    transform: perspective(350px) rotateY(-30deg);
+    animation: win 3s;
+}
+
+.child1, .child2, .child3, .child4{
+    width: 6.8vw;
+    height: 15vh;
+    background-color: white;
+}
+
+.child1{
+    left: 0%;
+    position: absolute;
+    transition: 0.4s;
+}
+.child2{
+    right: 0%;
+    position: absolute;
+    transition: 0.4s;
+}
+.child3{
+    left: 0%;
+    bottom: 0%;
+    position: absolute;
+    transition: 0.4s;
+}
+.child4{
+    right: 0%;
+    bottom: 0;
+    position: absolute;
+    transition: 0.4s;
+}
+
+.child1:hover, .child2:hover, .child3:hover, .child4:hover{
+    transform: scale(0.9);
+    background-color: grey;
+    cursor: pointer;
+}
+
+@keyframes win {
+    from {
+      transform: perspective(350px) rotateY(-180deg);
+    }
+}
